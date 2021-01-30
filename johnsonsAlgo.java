@@ -55,7 +55,7 @@ public class johnsonsAlgo {
 			List<Pair> cur = edges.get(i);
 			for (int j = 0; j< cur.size(); j++) {
 				int formerWeight = cur.get(j).weight;
-				int newWeight = formerWeight + h[j] - h[cur.get(j).to]; 
+				int newWeight = formerWeight + h[i] - h[cur.get(j).to]; 
 				newEdges.get(i).add(new Pair(cur.get(j).to, newWeight));
 			}
 		}
