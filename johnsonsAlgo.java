@@ -25,7 +25,7 @@ public class johnsonsAlgo {
 		}
 		int h[] = bellmanFord(0, edges);  // compute distance for reweightening
 		if (h == null) {
-			System.out.println("Negative cycle found")
+			System.out.println("Negative cycle found");
 			return null;
 		}
 		List<List<Pair>> newEdges = new ArrayList<>();  // will store the newly reweighted edges
