@@ -3,7 +3,7 @@ import java.io.*;
 
 public class johnsonsAlgo {
 	public static void main(String args[]) throws FileNotFoundException {
-		Scanner in = new Scanner(new File("Test"));
+		Scanner in = new Scanner(new File("John"));
 		int V = in.nextInt();
 		int E = in.nextInt();
 		System.out.println("|V| = " + V + ", " + "|E| = " + E);
