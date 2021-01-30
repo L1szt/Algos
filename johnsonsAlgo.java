@@ -6,7 +6,6 @@ public class johnsonsAlgo {
 		Scanner in = new Scanner(new File("testing"));
 		int V = in.nextInt();
 		int E = in.nextInt();
-		System.out.println(E + ", " + V);
 		List<List<Pair>> edges = new ArrayList<>();
 		for (int i = 0; i <= V; i++)
 			edges.add(new ArrayList<>());
