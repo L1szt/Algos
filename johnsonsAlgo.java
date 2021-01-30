@@ -118,6 +118,7 @@ class Pair {
 		Pair g = (Pair)o;
 		return g.to == this.to && g.weight == this.weight;
 	}
+	@Override
 	public String toString() {
 		return "(" + this.to + ", " + this.weight + ")";
 	}
