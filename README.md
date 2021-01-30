@@ -1,2 +1,2 @@
 # Algos
-Useful code snippets
+Johnson's algorithm
