@@ -82,9 +82,7 @@ public class johnsonsAlgo {
 			}
 		}
 		for (Triple edge : neu) {
-			if (dist[edge.to] > dist[edge.from] + edge.weight) {
-				return null;
-			}
+			if (dist[edge.to] > dist[edge.from] + edge.weight) return null;  // negative cycle detected
 		}
 		return dist;
 	}
