@@ -2,9 +2,9 @@ import java.util.*;
 class isBipartite {
     public boolean isBipartite(int[][] graph) {
         int V = graph.length;
-        int color[] = new int[V];  // 1 - red, 0 - blue
-        boolean visited[] = new boolean[V];  // keep track of the already visited vertices
-        for (int i =0; i < V; i++) {
+        int color[] = new int[V];  // red -> 0, blue -> 1
+        boolean visited[] = new boolean[V]; 
+        for (int i =0; i < V; i++) {  // graph might be disconnected
             if (!visited[i]) if (!dfs(i, graph, visited, color, 1)) return false;
         }
         return true;
