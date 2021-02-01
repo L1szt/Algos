@@ -10,9 +10,9 @@ boolean threePartition(int arr[]) {
 					if (i == 0 ) dp[i][j][k] = false;
 					else if (j == 0) dp[i][j][k] = true;
 					else if (k == 0) dp[i][j][k] = true;
-					else  dp[i][j][k] = j >= arr[i-1] && k >= arr[i-1] ? dp[i - 1][j - arr[i-1]][k] || dp[i - 1][j][k - arr[i-1]] || dp[i - 1][j][k]
-						  : j >= arr[i-1] ? dp[i - 1][j - arr[i-1]][k] || dp[i - 1][j][k]
-						  : k >= arr[i-1] ? dp[i - 1][j][k - arr[i-1]] || dp[i - 1][j][k] : dp[i - 1][j][k];
+					else  dp[i][j][k] = j >= arr[i-1] && k >= arr[i-1] ? dp[i - 1][j - arr[i-1]][k] || dp[i - 1][j][k - arr[i-1]] 
+						|| dp[i - 1][j][k] : j >= arr[i-1] ? dp[i - 1][j - arr[i-1]][k] || dp[i - 1][j][k]
+						 : k >= arr[i-1] ? dp[i - 1][j][k - arr[i-1]] || dp[i - 1][j][k] : dp[i - 1][j][k];
 				}
 			}
 		}
