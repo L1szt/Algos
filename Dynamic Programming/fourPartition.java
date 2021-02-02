@@ -9,8 +9,8 @@ public static boolean fourPartition(int arr[]) {
 						if (i == 0) dp[i][j][k][v] = false;
 						else if (j == 0 || k == 0 || v == 0) dp[i][j][k][v] = true;
 						else {
-							if (k >= arr[i-1] && j >= arr[i-1] && v >= arr[i-1]) dp[i][j][k][v] = dp[i-1][j-arr[i-1]][k][v] || dp[i-1][j][k-arr[i-1]][v]
-									|| dp[i-1][j][k][v-arr[i-1]] || dp[i-1][j][k][v];
+							if (k >= arr[i-1] && j >= arr[i-1] && v >= arr[i-1]) dp[i][j][k][v] = dp[i-1][j-arr[i-1]][k][v] 
+							|| dp[i-1][j][k-arr[i-1]][v] || dp[i-1][j][k][v-arr[i-1]] || dp[i-1][j][k][v];
 							else if (k >= arr[i-1] && j >= arr[i-1]) {
 								dp[i][j][k][v] = dp[i-1][j-arr[i-1]][k][v] || dp[i-1][j][k-arr[i-1]][v] ||dp[i-1][j][k][v];
 							} else if (k >= arr[i-1] && v >= arr[i-1]) {
