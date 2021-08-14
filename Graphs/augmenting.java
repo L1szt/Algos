@@ -47,9 +47,8 @@ public class augmenting {
 				visited.add(v);
 			}
 		}
-		System.out.println(L.get(0).toString());
 		for(int i=1;i<=n;i++) {
-			// odd
+			// odd => we go from A to B
 			L.add(new ArrayList<>());
 			if(i%2==1) {
 				for(int a:L.get(i-1)) {
@@ -58,7 +57,9 @@ public class augmenting {
 						if(R.contains(new Edge(a, b))) L.get(i).add(b);
 					}
 				}
-			} else {
+			} 
+			// even => we go from B to A
+			else {
 				for(int b:L.get(i-1)) {
 					for(int a:A) {
 						if(visited.contains(a)) continue;
@@ -66,13 +67,13 @@ public class augmenting {
 					}
 				}
 			}
-			System.out.println(L.get(i).toString());
 			for(int l:L.get(i)) {
 				visited.add(l);
 				int flag=0;
 				for(Edge e:M) if(e.u==l) flag=1;
 				if(flag==0) {
 					System.out.println("YES");
+					// backtracking the augmenting path
 					ArrayList<Edge> sol=new ArrayList<>();
 					int cur=l;
 					for(int j=i;j>=1;j--) {
@@ -102,3 +103,4 @@ public class augmenting {
 		return null;
 	}
 }
+
